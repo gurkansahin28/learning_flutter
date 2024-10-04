@@ -9,3 +9,10 @@
           ],
         ),
     );
+
+/*
+flutter:
+  uses-material-design: true
+  assets:
+  - assets/images/mo.png
+*/
