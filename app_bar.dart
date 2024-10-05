@@ -16,3 +16,26 @@ appBar: AppBar(
         ),
       ),
 //-------------------------------------------------------------------------------------------------
+AppBar myAppBar({required BuildContext context, required String title}) {
+  return AppBar(
+    backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+    shadowColor: Colors.white,
+    elevation: 1,
+    toolbarHeight: 50,
+    toolbarOpacity: 0.8,
+    toolbarTextStyle: const TextStyle(color: Colors.white),
+    title: Text(title),
+    centerTitle: false,
+    shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+      bottomLeft: Radius.circular(20),
+      bottomRight: Radius.circular(20),
+    )),
+    actions: [
+      IconButton(icon: const Icon(Icons.search), onPressed: () {},),
+      IconButton(icon: const Icon(Icons.menu), onPressed: () {},),
+    ],
+  );
+}
+//-------------------------------------------------------------------------------------------------
+
