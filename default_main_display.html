@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flutter Dart Default Main Structure</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+</head>
+<body>
+
+<div data-role="page" data-theme="b">
+
+	<div data-role="header">
+		<h1>Default main.dart structure</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<!-- ************************************************** //-->
+		<p>Here is default main.dart structure.</p>
+
+		<div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+    		<div data-role="collapsible">
+        		<h3>class MyApp extends StatelessWidget</h3>
+        		<p>@override</p>
+        		<div data-role="collapsible">
+        			<h3>Widget build(BuildContext context)</h3>
+        			<div data-role="collapsible">
+        				<h3>return MaterialApp</h3>
+        				<p>title: 'Flutter Demo'</p>
+        				<div data-role="collapsible">
+        					<h3>theme: ThemeData</h3>
+        					<p>primarySwatch: Colors.blue</p>
+        				</div><!-- theme: ThemeData -->
+        				<div data-role="collapsible">
+        					<h3>home: MyHomePage(title: 'Flutter Demo Home Page')</h3>
+        				</div><!-- home: MyHomePage -->
+        			</div><!-- return MaterialApp -->
+        		</div><!-- Widget build(BuildContext context) -->
+    		</div><!-- class MyApp extends StatelessWidget -->
+    		<!-- ----------------------------------------------------- -->
+
+    		<div data-role="collapsible">
+        		<h3>class MyHomePage extends StatefulWidget</h3>
+        		<p>MyHomePage({Key key, this.title}) : super(key: key);</p>
+        		<p>final String title;</p>
+        		<p>@override</p>
+        		<p>_MyHomePageState createState() => _MyHomePageState();</p>
+    		</div><!-- class MyHomePage extends StatefulWidget -->
+    		<!------------------------------------------------------------>
+
+
+    		<div data-role="collapsible">
+    			<h3>class _MyHomePageState extends State &lt;MyHomePage&gt;</h3>
+    			<p>int _counter = 0;</p>
+    			<div data-role="collapsible">
+    				<h3>void _incrementCounter()</h3>
+    				<div data-role="collapsible">
+    					<h3>setState(</h3>
+    					<p>() { <br> _counter++; <br> });</p>
+    				</div>
+    			</div><!-- _incrementCounter -->
+    			<p>@override</p>
+    			<div data-role="collapsible">
+    				<h3>Widget build(BuildContext context)</h3>
+    				<div data-role="collapsible">
+    					<h3>return Scaffold(</h3>
+    					<div data-role="collapsible">
+    						<h3>appBar:AppBar(</h3>
+    						<p>title: Text(widget.title),),</p>
+    					</div><!-- appBar -->
+    					<div data-role="collapsible">
+    						<h3>body: Center(</h3>
+    						<div data-role="collapsible">
+    							<h3>child: Column(</h3>
+    							<p>mainAxisAlignment: MainAxisAlignment.center,</p>
+    							<div data-role="collapsible">
+    								<h3>children: &lt;Widget&gt;[</h3>
+    								<p>Text('You have pushed the button this many times:',),</p>
+    								<p>Text('$_counter',style: Theme.of(context).textTheme.display1,),],</p>
+    							</div><!-- children: <Widget>[ -->
+    						</div><!-- child Column -->
+    					</div><!-- body:Center -->
+    					<div data-role="collapsible">
+    						<h3>floatingActionButton: FloatingActionButton(</h3>
+    						<p>
+    							onPressed: _incrementCounter,<br>
+    							tooltip: 'Increment',<br>
+    							child: Icon(Icons.add),),
+    						</p>
+    					</div>
+    				</div><!-- return Scaffold -->
+    			</div>
+    		</div><!-- class _MyHomePageState extends State<MyHomePage>   -->
+
+		</div>
+		<!------------------------------------------------------------>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<span><font size="2pt" color="#454545">This mobile web page has been coded by <a href="mailto:gurkansahin28@gmail.com">Gürkan Şahin</a> for educational purposes. It is GPL.</font></span><br>
+		<img width="62px" align="center" src="http://www.gnu.org/graphics/gplv3-or-later-sm.png">
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>
